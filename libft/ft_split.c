@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/15 17:13:19 by tmullan        #+#    #+#                */
-/*   Updated: 2019/11/25 20:25:06 by tmullan       ########   odam.nl         */
+/*   Updated: 2019/11/26 00:52:44 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ static int	ft_free(char **arroios, int i)
 {
 	if (arroios[i] == 0)
 	{
-		i--;
 		while (i > 0)
 		{
-			free(arroios[i]);
 			i--;
+			free(arroios[i]);
 		}
 		free(arroios);
 		return (1);
