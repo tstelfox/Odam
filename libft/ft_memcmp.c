@@ -6,14 +6,11 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/07 16:02:43 by tmullan        #+#    #+#                */
-/*   Updated: 2019/11/25 22:12:50 by tmullan       ########   odam.nl         */
+/*   Updated: 2019/11/26 20:10:33 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

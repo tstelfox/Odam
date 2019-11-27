@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/12 20:27:58 by tmullan        #+#    #+#                */
-/*   Updated: 2019/11/21 16:21:41 by tmullan       ########   odam.nl         */
+/*   Updated: 2019/11/27 12:29:25 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	write(fd, s, ft_strlen(s));
 	ft_putchar_fd('\n', fd);
 }

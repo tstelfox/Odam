@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/20 17:43:26 by tmullan        #+#    #+#                */
-/*   Updated: 2019/11/25 22:57:12 by tmullan       ########   odam.nl         */
+/*   Updated: 2019/11/26 21:09:44 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list *new;
 
 	edward = 0;
-	if (!f)
-		return (0);
-	if (lst)
+	if (lst && f)
 	{
 		edward = ft_lstnew(f(lst->content));
 		if (edward == 0)

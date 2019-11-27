@@ -6,7 +6,7 @@
 /*   By: tmullan <tmullan@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/13 11:23:23 by tmullan        #+#    #+#                */
-/*   Updated: 2019/11/18 18:58:05 by tmullan       ########   odam.nl         */
+/*   Updated: 2019/11/27 12:33:01 by tmullan       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,16 @@ static int	ft_count(int n)
 	count = 0;
 	if (n == 0)
 		count = 1;
-	if (n < 0)
+	else
 	{
-		count++;
-		while (n < 0)
+		if (n < 0)
+			count++;
+		while (n < 0 || n > 0)
 		{
 			n = n / 10;
 			count++;
 		}
 		return (count);
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		count++;
 	}
 	return (count);
 }
